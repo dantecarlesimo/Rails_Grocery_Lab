@@ -1,0 +1,7 @@
+<h1>Grocery List</h1>
+
+<%= link_to "Add Item to List", new_grocery_path %><br><br>
+
+<% @groceries.each do |list_item| %>
+    <li> <%= link_to list_item.item, grocery_path(list_item.id) %></li>
+<% end %>

@@ -1,0 +1,15 @@
+<h1>Edit your Item</h1>
+<%= form_for @grocery do |f| %>
+
+  <%= label_tag(:item, "Item:") %>
+  <%= f.text_field :item %></br>
+
+  <%= label_tag(:quantity, "Quantity:") %>
+  <%= f.text_field :quantity %></br> 
+  <!-- this many not work due to integer field -->
+
+  <%= label_tag(:description, "Description") %> 
+  <%= f.text_area :description %></br>
+
+  <%= f.submit "Update" %>
+<% end %>

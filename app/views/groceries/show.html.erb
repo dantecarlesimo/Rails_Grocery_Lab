@@ -1,0 +1,11 @@
+<h1>Grocery Item Info Page</h1>
+<p>Item: <%= @grocery.item%></p>
+<p>Quantity: <%= @grocery.quantity%></p>
+<p>Description: <%= @grocery.description%></p>
+
+
+<%= link_to "Edit", edit_grocery_path, :class => "btn btn-success "%><br>
+
+<%= link_to "delete", @grocery, method: :delete, data: { confirm: "Are you sure?" }, :class => "btn btn-danger btn-xs "%><br>
+
+<%= link_to "Back to Grocery List",groceries_path%><br>
